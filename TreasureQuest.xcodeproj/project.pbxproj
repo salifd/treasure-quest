@@ -14,6 +14,9 @@
 		6A5B070B2AD9E94500954723 /* TreasureQuestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B070A2AD9E94500954723 /* TreasureQuestTests.swift */; };
 		6A5B07152AD9E94500954723 /* TreasureQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B07142AD9E94500954723 /* TreasureQuestUITests.swift */; };
 		6A5B07172AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B07162AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift */; };
+		6A5B07242ADA186100954723 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B07232ADA186100954723 /* ButtonStyle.swift */; };
+		6AD512732ADB665500DB4601 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD512722ADB665500DB4601 /* PlayView.swift */; };
+		6AD512762ADB741A00DB4601 /* TreasureColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD512752ADB741A00DB4601 /* TreasureColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		6A5B07102AD9E94500954723 /* TreasureQuestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TreasureQuestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A5B07142AD9E94500954723 /* TreasureQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureQuestUITests.swift; sourceTree = "<group>"; };
 		6A5B07162AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6A5B07232ADA186100954723 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		6AD512722ADB665500DB4601 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		6AD512752ADB741A00DB4601 /* TreasureColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,8 +100,11 @@
 		6A5B06F82AD9E94400954723 /* TreasureQuest */ = {
 			isa = PBXGroup;
 			children = (
+				6AD512702ADAFCCD00DB4601 /* Util */,
+				6AD5126F2ADAFCAE00DB4601 /* View */,
+				6AD5126E2ADAFC9B00DB4601 /* Model */,
+				6AD5126D2ADAFC8C00DB4601 /* ViewModel */,
 				6A5B06F92AD9E94400954723 /* TreasureQuestApp.swift */,
-				6A5B06FB2AD9E94400954723 /* ContentView.swift */,
 				6A5B06FD2AD9E94500954723 /* Assets.xcassets */,
 				6A5B06FF2AD9E94500954723 /* Preview Content */,
 			);
@@ -125,6 +134,54 @@
 				6A5B07162AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift */,
 			);
 			path = TreasureQuestUITests;
+			sourceTree = "<group>";
+		};
+		6AD5126D2ADAFC8C00DB4601 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		6AD5126E2ADAFC9B00DB4601 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6AD5126F2ADAFCAE00DB4601 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6A5B06FB2AD9E94400954723 /* ContentView.swift */,
+				6AD512722ADB665500DB4601 /* PlayView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6AD512702ADAFCCD00DB4601 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6AD512742ADB740300DB4601 /* Color */,
+				6AD512712ADAFCE600DB4601 /* Style */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		6AD512712ADAFCE600DB4601 /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				6A5B07232ADA186100954723 /* ButtonStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		6AD512742ADB740300DB4601 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				6AD512752ADB741A00DB4601 /* TreasureColor.swift */,
+			);
+			path = Color;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +314,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A5B07242ADA186100954723 /* ButtonStyle.swift in Sources */,
+				6AD512762ADB741A00DB4601 /* TreasureColor.swift in Sources */,
 				6A5B06FC2AD9E94400954723 /* ContentView.swift in Sources */,
+				6AD512732ADB665500DB4601 /* PlayView.swift in Sources */,
 				6A5B06FA2AD9E94400954723 /* TreasureQuestApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,8 +488,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,8 +516,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
