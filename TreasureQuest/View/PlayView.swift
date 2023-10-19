@@ -10,23 +10,30 @@ import SwiftUI
 
 struct PlayView: View{
     
+    @ObservedObject var playViewModel = PlayViewModel()
+    
     var body: some View {
         
         ZStack {
             VStack(alignment: .center) {
                 Grid(alignment:.center) {
                     GridRow {
-                        Text("0")
+                        Text(playViewModel.goldPoint.description)
                             .bold()
                             .padding(5)
                         Image("gold_x1")
-                        Text("0")
+                        Text(playViewModel.diamondPoint.description)
                             .bold()
                             .padding(5)
                         Image("diamond_x1")
                     }
-                }.background(Color.blue)
+                }
+                
                 Text("Welcome")
+                
+                Button("Hunt treasure", action: {
+                    playViewModel.digg()
+                }).buttonStyle(TreasureQuest.MaroonButton())
             }
         }
         .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, maxHeight: .infinity)

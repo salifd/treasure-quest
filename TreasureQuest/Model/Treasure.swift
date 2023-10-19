@@ -14,11 +14,21 @@ struct Treasure {
     let iconName:String // The icon name which represente the treasure
     let value:Int // The value of the treasure
     let probability:Int // The probability to get the treasure value are between 0 - 99. The higher is the value the hight is your chance to get it.
+    let type:TreasureType
     
-    init(name: String, iconName: String, value: Int, probability: Int) {
-            self.name = name
-            self.iconName = iconName
-            self.value = value
-            self.probability = probability
+    init(name: String, iconName: String, value: Int, probability: Int, type:TreasureType) {
+        
+        self.name = name
+        self.iconName = iconName
+        self.value = value
+        self.probability = probability
+        self.type = type
     }
 }
+
+enum TreasureType {
+    case Gold
+    case Diamond
+}
+
+
