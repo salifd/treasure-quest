@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct PlayView: View{
+struct PlayView: View {
     
     @ObservedObject var playViewModel = PlayViewModel()
     
@@ -29,7 +29,7 @@ struct PlayView: View{
                     }
                 }
                 
-                Text("Welcome")
+                Text(playViewModel.displayedMessage)
                 
                 Button("Hunt treasure", action: {
                     playViewModel.digg()

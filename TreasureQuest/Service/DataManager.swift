@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 class DataManager: NSObject {
     
     private let treasureData:[Treasure]
@@ -27,13 +28,14 @@ class DataManager: NSObject {
         ]
     }
     
+    
     func digg() -> Treasure? {
         
         guard !self.treasureData.isEmpty else {
             return nil
         }
-    
-        let randomProbability = Int.random(in: 5...100) // Generate a random number between 5 and 100
+        
+        let randomProbability = Int.random(in: 5...100)
         var closestTreasure = self.treasureData[0]
         var minDiff = abs(self.treasureData[0].probability - randomProbability)
         
@@ -45,6 +47,9 @@ class DataManager: NSObject {
                 closestTreasure = treasure
             }
         }
+        
+        let workDelay = TimeInterval.random(in: 0.5...1.5)
+        Thread.sleep(forTimeInterval: workDelay)
         
         return closestTreasure
     }
