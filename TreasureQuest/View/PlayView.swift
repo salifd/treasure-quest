@@ -21,15 +21,17 @@ struct PlayView: View {
                         Text(playViewModel.goldPoint.description)
                             .bold()
                             .padding(5)
-                        Image("gold_x1")
+                        Image("gold_x2")
                         Text(playViewModel.diamondPoint.description)
                             .bold()
                             .padding(5)
-                        Image("diamond_x1")
+                        Image("diamond_x2")
                     }
                 }
                 
                 Text(playViewModel.displayedMessage)
+                    .padding()
+                    .multilineTextAlignment(.center)
                 
                 Button("Hunt treasure", action: {
                     playViewModel.digg()

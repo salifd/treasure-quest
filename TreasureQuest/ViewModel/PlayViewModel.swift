@@ -23,21 +23,21 @@ class PlayViewModel: ObservableObject {
         self.dataRepository = DataRepository()
         self.diamondPoint = 0
         self.goldPoint = 0
-        self.displayedMessage = "Welcome to Treasure hunt, start playing by clicking on Huunt"
+        self.displayedMessage = "Welcome to Treasure hunt, start playing by clicking on Hunt"
     }
     
     func digg() {
         
         cancellables = dataRepository.digg().sink(receiveCompletion: { completion in
-            // Handle error
+            // Improvement: handle error here
         }, receiveValue: { treasure in
             switch treasure.type {
             case .Diamond:
                 self.diamondPoint += treasure.value
-                self.displayedMessage = "Wow you found a rare gem \(treasure.name) for \(treasure.value) !!"
+                self.displayedMessage = "Wow you discovered a rare gem \(treasure.name) worth \(treasure.value) unit !!"
             default:
                 self.goldPoint += treasure.value
-                self.displayedMessage = "You found \(treasure.name) for \(treasure.value) !"
+                self.displayedMessage = "You discovered a valuable \(treasure.name) worth \(treasure.value) unit !"
                 
             }
         })
