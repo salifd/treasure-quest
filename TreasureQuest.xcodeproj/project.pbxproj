@@ -58,6 +58,7 @@
 		6A8471BE2AE1CB8E00080DF1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		6A8471C22AE1D6D100080DF1 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
 		6A8471C42AE1DCFC00080DF1 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		6A8471CB2AE222BC00080DF1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6AD512722ADB665500DB4601 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		6AD512752ADB741A00DB4601 /* TreasureColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +93,7 @@
 		6A5B06ED2AD9E94400954723 = {
 			isa = PBXGroup;
 			children = (
+				6A8471CB2AE222BC00080DF1 /* README.md */,
 				6A5B06F82AD9E94400954723 /* TreasureQuest */,
 				6A5B07092AD9E94500954723 /* TreasureQuestTests */,
 				6A5B07132AD9E94500954723 /* TreasureQuestUITests */,
