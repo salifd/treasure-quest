@@ -26,7 +26,7 @@ class DataRepository {
     
     func digg() -> AnyPublisher<Treasure, Error> {
         
-        guard let url = URL(string: "http://treasure-hunt.com/digg") else {
+        guard let url = URL(string: "https://treasure-hunt.com/api/digg") else {
             let error = URLError(.badURL)
             return Fail(error: error).eraseToAnyPublisher()
         }

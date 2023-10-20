@@ -6,31 +6,48 @@
 //
 
 import XCTest
+import Combine
 @testable import TreasureQuest
 
 final class TreasureQuestTests: XCTestCase {
     
-    
+    private var dataRepository: DataRepository!
+    private var cancellables: Set<AnyCancellable> = []
     
     override func setUpWithError() throws {
-        
+        dataRepository = .init()
+        try super.setUpWithError()
     }
     
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        dataRepository = nil
+        try super.tearDownWithError()
     }
     
-    func testExample() throws {
+    func testDigging() throws {
         
+        let expectation = XCTestExpectation(description: "Fetching treasure data")
         
+        dataRepository.digg()
+            .sink(receiveCompletion: { completion in
+                switch completion {
+                case .failure(let error):
+                    XCTFail("Fetching treasure data failed with error: \(error)")
+                case .finished:
+                    break
+                }
+                expectation.fulfill()
+            }, receiveValue: { treasure in
+                // Here is the sample of expected result,
+                // it will fail if the result is different
+                XCTAssertEqual(treasure.name, "Gold")
+                XCTAssertEqual(treasure.iconName, "gold_x1")
+                XCTAssertEqual(treasure.value, 10)
+            })
+            .store(in: &cancellables)
         
-    }
-    
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        wait(for: [expectation], timeout: 3.0)
+        
     }
     
 }
