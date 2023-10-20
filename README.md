@@ -40,7 +40,7 @@ In Our case here, improvements could be :
 
 - Splitting into multiple specfic endpoint by having POST, PUT or DELETE.
 - Adding an embed databse to store some informations related to the user.
-- Adding an mechanism to able create a queue for multiple requests.
+- Adding a mechanism to able create a queue for multiple requests.
  
 
 ## License
