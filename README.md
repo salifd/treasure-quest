@@ -7,6 +7,7 @@ Treasure Quest is an iOS application that offers treasure hunts where you can un
 - [Approach](#approach)
 - [Features](#features)
 - [Improvements](#improvements)
+- [Duration](#duration)
 - [License](#license)
 
 ## Approach
@@ -41,7 +42,10 @@ In Our case here, improvements could be :
 - Splitting into multiple specfic endpoint by having POST, PUT or DELETE.
 - Adding an embed databse to store some informations related to the user.
 - Adding a mechanism to able create a queue for multiple requests.
- 
+
+## Duration
+
+The challenge required approximately 5h30 to complete.
 
 ## License
 
