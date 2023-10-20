@@ -16,6 +16,11 @@ struct PlayView: View {
         
         ZStack {
             VStack(alignment: .center) {
+                Image("mining")
+                    .resizable()
+                    .padding(20)
+                    .aspectRatio(contentMode: .fit)
+    
                 Grid(alignment:.center) {
                     GridRow {
                         Text(playViewModel.goldPoint.description)
@@ -33,7 +38,7 @@ struct PlayView: View {
                     .padding()
                     .multilineTextAlignment(.center)
                 
-                Button("Hunt treasure", action: {
+                Button("Hunt", action: {
                     playViewModel.digg()
                 }).buttonStyle(TreasureQuest.MaroonButton())
             }
