@@ -1,6 +1,6 @@
 # Treasure Quest
 
-Treasure Quest is an iOS application that offers treasure hunts where you can uncover treasures with random values based varying probabilities.
+Treasure Quest is an iOS application that offers treasure hunts where you can uncover gems with random values based varying probabilities.
 
 ## Table of Contents
 
@@ -24,7 +24,7 @@ We can also talk about the service layer which handles networking, data storage,
 ## Features
 
 - **Simulate Treasure Hunts:** Enjoy the thrill of treasure hunts with random rewards.
-- **Unique Treasures:** Each treasure has a unique value and probability, adding excitement and unpredictability to the game.
+- **Unique Treasures:** Each treasure has a unique value and probability.
 
 ## Improvements
 
@@ -36,9 +36,11 @@ In a real production app, we would consider different approaches to enhance the 
 - **User Feedback:** Collect and analyze user feedback to continuously improve and optimize the app.
 
 
-In Our case here :
-The improvement would be splitting into multiple specfic endpoint by having POST, PUT or DELETE.
-We can also have an embed databse to store some informations related to the user.
+In Our case here, improvements could be :
+
+- Splitting into multiple specfic endpoint by having POST, PUT or DELETE.
+- Adding an embed databse to store some informations related to the user.
+- Adding an mechanism to able create a queue for multiple requests.
  
 
 ## License
