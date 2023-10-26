@@ -15,6 +15,12 @@
 		6A5B07152AD9E94500954723 /* TreasureQuestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B07142AD9E94500954723 /* TreasureQuestUITests.swift */; };
 		6A5B07172AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B07162AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift */; };
 		6A5B07242ADA186100954723 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5B07232ADA186100954723 /* ButtonStyle.swift */; };
+		6A8471BC2AE1B2A700080DF1 /* Treasure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8471BB2AE1B2A700080DF1 /* Treasure.swift */; };
+		6A8471BF2AE1CB8E00080DF1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8471BE2AE1CB8E00080DF1 /* DataManager.swift */; };
+		6A8471C32AE1D6D100080DF1 /* DataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8471C22AE1D6D100080DF1 /* DataRepository.swift */; };
+		6A8471C52AE1DCFC00080DF1 /* PlayViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8471C42AE1DCFC00080DF1 /* PlayViewModel.swift */; };
+		6A8471C82AE1FD4300080DF1 /* OHHTTPStubs in Frameworks */ = {isa = PBXBuildFile; productRef = 6A8471C72AE1FD4300080DF1 /* OHHTTPStubs */; };
+		6A8471CA2AE1FD4300080DF1 /* OHHTTPStubsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A8471C92AE1FD4300080DF1 /* OHHTTPStubsSwift */; };
 		6AD512732ADB665500DB4601 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD512722ADB665500DB4601 /* PlayView.swift */; };
 		6AD512762ADB741A00DB4601 /* TreasureColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AD512752ADB741A00DB4601 /* TreasureColor.swift */; };
 /* End PBXBuildFile section */
@@ -48,6 +54,11 @@
 		6A5B07142AD9E94500954723 /* TreasureQuestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureQuestUITests.swift; sourceTree = "<group>"; };
 		6A5B07162AD9E94500954723 /* TreasureQuestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureQuestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6A5B07232ADA186100954723 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		6A8471BB2AE1B2A700080DF1 /* Treasure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Treasure.swift; sourceTree = "<group>"; };
+		6A8471BE2AE1CB8E00080DF1 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		6A8471C22AE1D6D100080DF1 /* DataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRepository.swift; sourceTree = "<group>"; };
+		6A8471C42AE1DCFC00080DF1 /* PlayViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewModel.swift; sourceTree = "<group>"; };
+		6A8471CB2AE222BC00080DF1 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		6AD512722ADB665500DB4601 /* PlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
 		6AD512752ADB741A00DB4601 /* TreasureColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TreasureColor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8471C82AE1FD4300080DF1 /* OHHTTPStubs in Frameworks */,
+				6A8471CA2AE1FD4300080DF1 /* OHHTTPStubsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +93,7 @@
 		6A5B06ED2AD9E94400954723 = {
 			isa = PBXGroup;
 			children = (
+				6A8471CB2AE222BC00080DF1 /* README.md */,
 				6A5B06F82AD9E94400954723 /* TreasureQuest */,
 				6A5B07092AD9E94500954723 /* TreasureQuestTests */,
 				6A5B07132AD9E94500954723 /* TreasureQuestUITests */,
@@ -100,6 +114,7 @@
 		6A5B06F82AD9E94400954723 /* TreasureQuest */ = {
 			isa = PBXGroup;
 			children = (
+				6A8471BD2AE1CB7800080DF1 /* Service */,
 				6AD512702ADAFCCD00DB4601 /* Util */,
 				6AD5126F2ADAFCAE00DB4601 /* View */,
 				6AD5126E2ADAFC9B00DB4601 /* Model */,
@@ -136,9 +151,19 @@
 			path = TreasureQuestUITests;
 			sourceTree = "<group>";
 		};
+		6A8471BD2AE1CB7800080DF1 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				6A8471BE2AE1CB8E00080DF1 /* DataManager.swift */,
+				6A8471C22AE1D6D100080DF1 /* DataRepository.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		6AD5126D2ADAFC8C00DB4601 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6A8471C42AE1DCFC00080DF1 /* PlayViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -146,6 +171,7 @@
 		6AD5126E2ADAFC9B00DB4601 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6A8471BB2AE1B2A700080DF1 /* Treasure.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -200,6 +226,10 @@
 			dependencies = (
 			);
 			name = TreasureQuest;
+			packageProductDependencies = (
+				6A8471C72AE1FD4300080DF1 /* OHHTTPStubs */,
+				6A8471C92AE1FD4300080DF1 /* OHHTTPStubsSwift */,
+			);
 			productName = TreasureQuest;
 			productReference = 6A5B06F62AD9E94400954723 /* TreasureQuest.app */;
 			productType = "com.apple.product-type.application";
@@ -272,6 +302,9 @@
 				Base,
 			);
 			mainGroup = 6A5B06ED2AD9E94400954723;
+			packageReferences = (
+				6A8471C62AE1FD4300080DF1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */,
+			);
 			productRefGroup = 6A5B06F72AD9E94400954723 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,7 +348,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5B07242ADA186100954723 /* ButtonStyle.swift in Sources */,
+				6A8471C52AE1DCFC00080DF1 /* PlayViewModel.swift in Sources */,
 				6AD512762ADB741A00DB4601 /* TreasureColor.swift in Sources */,
+				6A8471BC2AE1B2A700080DF1 /* Treasure.swift in Sources */,
+				6A8471C32AE1D6D100080DF1 /* DataRepository.swift in Sources */,
+				6A8471BF2AE1CB8E00080DF1 /* DataManager.swift in Sources */,
 				6A5B06FC2AD9E94400954723 /* ContentView.swift in Sources */,
 				6AD512732ADB665500DB4601 /* PlayView.swift in Sources */,
 				6A5B06FA2AD9E94400954723 /* TreasureQuestApp.swift in Sources */,
@@ -646,6 +683,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A8471C62AE1FD4300080DF1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AliSoftware/OHHTTPStubs";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A8471C72AE1FD4300080DF1 /* OHHTTPStubs */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A8471C62AE1FD4300080DF1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubs;
+		};
+		6A8471C92AE1FD4300080DF1 /* OHHTTPStubsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A8471C62AE1FD4300080DF1 /* XCRemoteSwiftPackageReference "OHHTTPStubs" */;
+			productName = OHHTTPStubsSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A5B06EE2AD9E94400954723 /* Project object */;
 }
